@@ -8,6 +8,8 @@
     <title>Orange Fit - Inscrição</title>
 </head>
 <body>
+    <?php include './includes/header.html'; ?>
+
     <form action="result.php" method="post">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required>
