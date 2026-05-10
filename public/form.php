@@ -13,31 +13,45 @@
 <body>
     <?php include './includes/header.html'; ?>
 
-    <div class="container">
-        <h2>Inscrição</h2>
+    <main>
+        <div class="container">
+            <h2>Inscrição</h2>
+    
+            <form action="result.php" method="post">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-        <form action="result.php" method="post">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
 
-            <label for="phone">Telefone:</label>
-            <input type="tel" id="phone" name="phone" required>
+                <div class="form-group">
+                    <label for="birth">Data de Nascimento:</label>
+                    <input type="date" id="birth" name="birth" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required>
+                </div>
 
-            <label for="birth">Data de Nascimento:</label>
-            <input type="date" id="birth" name="birth" required>
+                <div class="form-group">
+                    <label for="adress">Endereço:</label>
+                    <input type="text" id="adress" name="adress" required>
+                </div>
 
-            <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" required>
-
-            <label for="adress">Endereço:</label>
-            <input type="text" id="adress" name="adress" required>
-
-            <input type="submit" value="Inscrever-se" name="submit">
-        </form>
-    </div>
+                <input type="submit" value="Inscrever-se" name="submit">
+            </form>
+        </div>
+    </main>
 
     <?php include './includes/footer.html'; ?>
 </body>
