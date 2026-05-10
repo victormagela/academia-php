@@ -31,5 +31,7 @@
 
         <input type="submit" value="Inscrever-se" name="submit">
     </form>
+
+    <?php include './includes/footer.html'; ?>
 </body>
 </html>
