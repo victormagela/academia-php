@@ -143,3 +143,8 @@ input[type="submit"] {
 .highlight-word {
     color: var(--accent-color);
 }
+
+figure img {
+    height: 420px;
+    width: 560px;
+}
