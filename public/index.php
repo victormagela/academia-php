@@ -27,6 +27,21 @@
             <figure>
                 <img src="./assets/orange-fit.png" alt="orange fit" height="420" width="560">
             </figure>
+
+            <div class="card">
+                <h3>Endereço</h3>
+                <p>Av. Narciso de Guimarães, 455</p>
+                <p>Jd. Olívia, Mogi das Cruzes - SP</p>
+            </div>
+
+            <div class="card">
+                <h3>Horários</h3>
+                <p>Segunda: Abre às 07:00</p>
+                <p>Terça a sexta: 09:00 às 23:00</p>
+                <p>Sábado: Fecha às 16:00</p>
+                <p>Domingo: 09:00 às 14:00</p>
+                <p>Feriados: 09:00 às 16:00</p>
+            </div>
         </div>
     </main>
 
