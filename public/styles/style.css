@@ -108,7 +108,6 @@ input[type="submit"] {
 }
 
 .banner {
-    background-image: url("../assets/danielle-cerullo-CQfNt66ttZM-unsplash.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;

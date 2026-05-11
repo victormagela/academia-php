@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="./scripts/banner.js"></script>
     <title>Orange Fit - Home</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
             </div>
             
             <div class="overlay">
-                <p id="credits">Foto de <span class="highlight-word"><a href="https://unsplash.com/pt-br/@dncerullo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Danielle Cerullo</a></span> na <span class="highlight-word"><a href="https://unsplash.com/pt-br/fotografias/mulher-em-pe-cercada-por-equipamento-de-exercicio-CQfNt66ttZM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span></p>
+                <p id="credits"></p>
             </div>
         </div>
     </main>
