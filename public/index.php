@@ -11,10 +11,14 @@
     <?php include './includes/header.html'; ?>
     
     <main>
+        <div class="banner">
+            <h1>Bem-vindo à Orange Fit</h1>
+            <p>Transforme seu corpo e sua vida com a gente!</p>
+            <p id="credits"></p>
+        </div>
 
     </main>
 
     <?php include './includes/footer.html'; ?>
-    
 </body>
 </html>
