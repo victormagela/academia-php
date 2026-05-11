@@ -42,6 +42,8 @@
                 <p>Domingo: 09:00 às 14:00</p>
                 <p>Feriados: 09:00 às 16:00</p>
             </div>
+
+            <a href="./form.php">Apenas R$99,90! Inscreva-se já!</a>
         </div>
     </main>
 
