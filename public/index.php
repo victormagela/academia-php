@@ -10,13 +10,17 @@
 <body>
     <?php include './includes/header.html'; ?>
     
-    <main>
+    <main class="main-index">
         <div class="banner">
-            <h1>Bem-vindo à Orange Fit</h1>
-            <p>Transforme seu corpo e sua vida com a gente!</p>
-            <p id="credits"></p>
+            <div class="overlay">
+                <h2>Bem-vindo à <span class="highlight-word">Orange Fit</span></h2>
+                <p>Transforme seu corpo e sua vida com a gente!</p>
+            </div>
+            
+            <div class="overlay">
+                <p id="credits">Foto de <span class="highlight-word"><a href="https://unsplash.com/pt-br/@dncerullo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Danielle Cerullo</a></span> na <span class="highlight-word"><a href="https://unsplash.com/pt-br/fotografias/mulher-em-pe-cercada-por-equipamento-de-exercicio-CQfNt66ttZM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span></p>
+            </div>
         </div>
-
     </main>
 
     <?php include './includes/footer.html'; ?>
