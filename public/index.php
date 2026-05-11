@@ -8,6 +8,13 @@
     <title>Orange Fit - Home</title>
 </head>
 <body>
+    <?php include './includes/header.html'; ?>
+    
+    <main>
+
+    </main>
+
+    <?php include './includes/footer.html'; ?>
     
 </body>
 </html>
