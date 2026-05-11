@@ -19,7 +19,7 @@
             </div>
             
             <div class="overlay">
-                <p id="credits"></p>
+                <p id="credits">Foto de <span class="highlight-word"><a href="https://unsplash.com/pt-br/@dncerullo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Danielle Cerullo</a></span> na <span class="highlight-word"><a href="https://unsplash.com/pt-br/fotografias/mulher-em-pe-cercada-por-equipamento-de-exercicio-CQfNt66ttZM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a></span></p>
             </div>
         </div>
     </main>
