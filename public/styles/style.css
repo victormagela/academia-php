@@ -31,6 +31,24 @@ nav ul {
     font-size: 1.3rem;
 }
 
+ul a {
+    border-radius: 10px;
+    padding: 0.25rem 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: var(--background-color);
+        color: var(--primary-color);
+    }
+}
+
+ul .cta-link {
+    border-radius: 10px;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
 main {
     padding: 2rem;
 }
