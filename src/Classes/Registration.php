@@ -1,12 +1,12 @@
 <?php
 
 class Registration {
-    private string $name;
-    private string $email;
-    private string $phone;
-    private string $birthDate;
-    private string $cpf;
-    private string $address;
+    public string $name;
+    public string $email;
+    public string $phone;
+    public string $birthDate;
+    public string $cpf;
+    public string $address;
 
     public function __construct(
         string $name, 
