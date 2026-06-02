@@ -44,8 +44,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="adress">Endereço:</label>
-                    <input type="text" id="adress" name="adress" required>
+                    <label for="address">Endereço:</label>
+                    <input type="text" id="address" name="address" required>
                 </div>
 
                 <input type="submit" value="Inscrever-se" name="submit">
