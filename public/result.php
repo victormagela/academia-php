@@ -1,17 +1,19 @@
 <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST['submit']) {
-            $data = [
-                "Nome" => $_POST['name'],
-                "Email" => $_POST['email'],
-                "Telefone" => $_POST['phone'],
-                "Data de Nascimento" => $_POST['birth'],
-                "CPF" => $_POST['cpf'],
-                "Endereço" => $_POST['adress']
-            ];
+            require_once "../src/Classes/Registration.php";
+
+            $registration = new Registration(
+                $_POST['name'],
+                $_POST['email'],
+                $_POST['phone'],
+                $_POST['birth'],
+                $_POST['cpf'],
+                $_POST['address'],
+            );
 
             $content = '';
-            foreach ($data as $key => $value) {
+            foreach ($registration as $key => $value) {
                 $content .= "$key: $value\n";
             }
 
