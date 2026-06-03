@@ -3,8 +3,12 @@
         if ($_POST['submit']) {
             require_once "../src/Classes/Registration.php";
             require_once "../src/Classes/Dbh.php";
+            require_once "../src/Classes/RegistrationRepository.php";
 
-            $registration = new Registration(
+            $conn = Dbh::getConnection();
+            $repo = new RegistrationRepository($conn);
+
+            $registration = Registration::create(
                 $_POST['name'],
                 $_POST['email'],
                 $_POST['phone'],
@@ -13,13 +17,7 @@
                 $_POST['address'],
             );
 
-            $content = '';
-            foreach ($registration as $key => $value) {
-                $content .= "$key: $value\n";
-            }
-
-            $file_name = "inscrição_" . date("Ymd_His") . ".txt";
-            file_put_contents($file_name, $content);
+            $repo->save($registration);
         }
     } else {
         // Redireciona para o formulário se o acesso for direto
@@ -41,10 +39,8 @@
 
     <main>
         <div class="container">
-            <?php if (isset($file_name)): ?>
-                <h2>Resultado</h2>
-                <p style="color: green; text-align: center;">Arquivo salvo como: <?= $file_name; ?></p>
-            <?php endif; ?>
+            <h2>Resultado</h2>
+            <p style="color: green; text-align: center;">Cadastro feito com sucesso!</p>
         </div>
     </main>
     

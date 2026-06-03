@@ -1,6 +1,7 @@
 <?php
 
 class Registration {
+    private ?int $registrationId; 
     public string $name;
     public string $email;
     public string $phone;
@@ -8,13 +9,14 @@ class Registration {
     public string $cpf;
     public string $address;
 
-    public function __construct(
+    private function __construct(
         string $name, 
         string $email, 
         string $phone, 
         string $birthDate, 
         string $cpf, 
-        string $address
+        string $address,
+        ?int $registrationId = null
     )
     {
         $this->name = $name;
@@ -23,5 +25,47 @@ class Registration {
         $this->birthDate = $birthDate;
         $this->cpf = $cpf;
         $this->address= $address;
+    }
+
+    static public function create(
+        string $name, 
+        string $email, 
+        string $phone, 
+        string $birthDate, 
+        string $cpf, 
+        string $address
+    ): Registration {
+        return new Registration(
+        $name, 
+        $email, 
+        $phone, 
+        $birthDate, 
+        $cpf, 
+        $address
+        );
+    }
+
+    static public function fromDb(
+        string $name, 
+        string $email, 
+        string $phone, 
+        string $birthDate, 
+        string $cpf, 
+        string $address,
+        int $registrationId
+    ): Registration {
+        return new Registration(
+        $name, 
+        $email, 
+        $phone, 
+        $birthDate, 
+        $cpf, 
+        $address,
+        $registrationId
+        );
+    }
+
+    public function getId() {
+        return $this->registrationId;
     }
 }
