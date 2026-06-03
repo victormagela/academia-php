@@ -2,6 +2,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST['submit']) {
             require_once "../src/Classes/Registration.php";
+            require_once "../src/Classes/Dbh.php";
 
             $registration = new Registration(
                 $_POST['name'],
