@@ -35,6 +35,7 @@
                             <th>Data de Nascimento</th>
                             <th>CPF</th>
                             <th>Endereço</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +48,7 @@
                                 <td><?= $registration->birthDate; ?></td>
                                 <td><?= $registration->cpf; ?></td>
                                 <td><?= $registration->address; ?></td>
+                                <td><a href="edit.php?id=<?= $registration->getId() ?>">Editar</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
