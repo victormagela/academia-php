@@ -28,7 +28,7 @@
                 <table>
                     <thead>
                         <th>
-                            <!-- <tr>Id</tr> -->
+                            <tr>Id</tr>
                             <tr>Nome</tr>
                             <tr>Email</tr>
                             <tr>Telefone</tr>
@@ -40,7 +40,7 @@
                     <tbody>
                         <?php foreach($registrations as $registration): ?>
                             <tr>
-                                <!-- <td><?= $registration->getId(); ?></td> -->
+                                <td><?= $registration->getId(); ?></td>
                                 <td><?= $registration->name; ?><?= $registration->name; ?></td>
                                 <td><?= $registration->email; ?></td>
                                 <td><?= $registration->phone; ?></td>
