@@ -19,6 +19,7 @@ class Registration {
         ?int $registrationId = null
     )
     {
+        $this->registrationId = $registrationId;
         $this->name = $name;
         $this->email = $email;
         $this->phone = $phone;
