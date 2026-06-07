@@ -1,3 +1,12 @@
+<?php 
+    // require_once "../src/Classes/Dbh.php";
+
+    if (!isset($_GET['id'])) {
+        echo "Id não informado.";
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
