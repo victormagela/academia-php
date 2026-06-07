@@ -27,15 +27,15 @@
     
                 <table>
                     <thead>
-                        <th>
-                            <tr>Id</tr>
-                            <tr>Nome</tr>
-                            <tr>Email</tr>
-                            <tr>Telefone</tr>
-                            <tr>Data de Nascimento</tr>
-                            <tr>CPF</tr>
-                            <tr>Endereço</tr>
-                        </th>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Data de Nascimento</th>
+                            <th>CPF</th>
+                            <th>Endereço</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <?php foreach($registrations as $registration): ?>
@@ -57,7 +57,7 @@
         </div>
     </main>
 
-    <?php include "./includes/header.html" ?>
+    <?php include "./includes/footer.html" ?>
     
 </body>
 </html>
