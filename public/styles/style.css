@@ -13,8 +13,8 @@
 
 .flex-row > input[type="submit"],
 .flex-row > a {
-    flex-grow: 1;
-    text-align: center;
+  flex-grow: 1;
+  text-align: center;
 }
 
 body {
@@ -275,4 +275,15 @@ th {
 
 tr:nth-child(even) {
   background-color: #e5e5e5;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.edit {
+  background-color: #4caf50;
+  color: white;
 }

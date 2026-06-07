@@ -11,6 +11,24 @@
     }
 
     $id = intval($_GET['id']);
+
+    if ($_SERVER['REQUEST_METHOD'] === "POST") {
+        $rowCount = $repo->updateRegistration(
+            $id,
+            $_POST['name'],
+            $_POST['email'],
+            $_POST['phone'],
+            $_POST['birth'],
+            $_POST['cpf'],
+            $_POST['address'],
+        );
+
+        if ($rowCount < 1) {
+            echo "Ocorreu algum erro.";
+            exit;
+        }
+    }
+
     $registration = $repo->findById($id);
 ?>
 
@@ -29,7 +47,7 @@
         <div class="container">
             <h2>Editar Cadastro</h2>
 
-            <form action="edit.php" method="post">
+            <form action="" method="post">
                 <div class="form-group">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" name="name" value="<?= $registration->name ?>">
@@ -57,7 +75,7 @@
 
                 <div class="form-group">
                     <label for="address">Endereço:</label>
-                    <input type="text" id="address" name="address" value="<?= $registration->cpf ?>">
+                    <input type="text" id="address" name="address" value="<?= $registration->address ?>">
                 </div>
 
                 <div class="flex-row">

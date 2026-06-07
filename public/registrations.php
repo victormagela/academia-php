@@ -42,13 +42,13 @@
                         <?php foreach($registrations as $registration): ?>
                             <tr>
                                 <td><?= $registration->getId(); ?></td>
-                                <td><?= $registration->name; ?><?= $registration->name; ?></td>
+                                <td><?= $registration->name; ?></td>
                                 <td><?= $registration->email; ?></td>
                                 <td><?= $registration->phone; ?></td>
                                 <td><?= $registration->birthDate; ?></td>
                                 <td><?= $registration->cpf; ?></td>
                                 <td><?= $registration->address; ?></td>
-                                <td><a href="edit.php?id=<?= $registration->getId() ?>">Editar</a></td>
+                                <td><a class="btn edit" href="edit.php?id=<?= $registration->getId() ?>">Editar</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

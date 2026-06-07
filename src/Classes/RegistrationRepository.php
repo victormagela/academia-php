@@ -44,4 +44,37 @@ class RegistrationRepository {
             $result[0]['registration_id']
         );
     }
+
+    public function updateRegistration(
+        int $id,
+        string $name,
+        string $email,
+        string $phone,
+        string $birthDate,
+        string $cpf,
+        string $address,
+    ): int {
+        $stmt = $this->db->prepare(
+            "UPDATE registrations
+            SET
+                name = :name,
+                email = :email,
+                phone = :phone,
+                birth_date = :birthDate,
+                cpf = :cpf,
+                address = :address
+            WHERE registration_id = $id;"
+        );
+        
+        $stmt->execute([
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'birthDate' => $birthDate,
+            'cpf' => $cpf,
+            'address' => $address           
+        ]);
+        
+        return $stmt->rowCount();
+    }
 }
