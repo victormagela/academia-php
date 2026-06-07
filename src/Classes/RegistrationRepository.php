@@ -28,4 +28,20 @@ class RegistrationRepository {
 
         return array_map(fn($row) => Registration::fromDb($row['name'], $row['email'], $row['phone'], $row['birth_date'], $row['cpf'], $row['address'], $row['registration_id']), $result);
     }
+
+    public function findById(int $id): Registration {
+        $stmt = $this->db->prepare("SELECT * FROM registrations WHERE registration_id = $id");
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        return Registration::fromDb(
+            $result[0]['name'],
+            $result[0]['email'],
+            $result[0]['phone'],
+            $result[0]['birth_date'],
+            $result[0]['cpf'],
+            $result[0]['address'],
+            $result[0]['registration_id']
+        );
+    }
 }

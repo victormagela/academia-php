@@ -1,10 +1,17 @@
 <?php 
-    // require_once "../src/Classes/Dbh.php";
+    require_once "../src/Classes/Dbh.php";
+    require_once "../src/Classes/RegistrationRepository.php";
+    require_once "../src/Classes/Registration.php";
+
+    $repo = new RegistrationRepository(Dbh::getConnection());
 
     if (!isset($_GET['id'])) {
         echo "Id não informado.";
         exit;
     }
+
+    $id = intval($_GET['id']);
+    $registration = $repo->findById($id);
 ?>
 
 <!DOCTYPE html>
@@ -25,32 +32,32 @@
             <form action="edit.php" method="post">
                 <div class="form-group">
                     <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" value="<?= $registration->name ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" value="<?= $registration->email ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Telefone:</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" value="<?= $registration->phone ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="birth">Data de Nascimento:</label>
-                    <input type="date" id="birth" name="birth">
+                    <input type="date" id="birth" name="birth" value="<?= $registration->birthDate ?>">
                 </div>
     
                 <div class="form-group">
                     <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf">
+                    <input type="text" id="cpf" name="cpf" value="<?= $registration->cpf ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="address">Endereço:</label>
-                    <input type="text" id="address" name="address">
+                    <input type="text" id="address" name="address" value="<?= $registration->cpf ?>">
                 </div>
 
                 <div class="flex-row">
