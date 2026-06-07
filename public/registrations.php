@@ -39,7 +39,6 @@
                     </thead>
                     <tbody>
                         <?php foreach($registrations as $registration): ?>
-                            <?php var_dump($registration); ?>
                             <tr>
                                 <!-- <td><?= $registration->getId(); ?></td> -->
                                 <td><?= $registration->name; ?><?= $registration->name; ?></td>
