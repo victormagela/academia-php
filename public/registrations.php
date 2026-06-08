@@ -48,7 +48,12 @@
                                 <td><?= $registration->birthDate; ?></td>
                                 <td><?= $registration->cpf; ?></td>
                                 <td><?= $registration->address; ?></td>
-                                <td><a class="btn edit" href="edit.php?id=<?= $registration->getId() ?>">Editar</a></td>
+                                <td>
+                                    <div class="flex-row">
+                                        <a class="btn edit" href="edit.php?id=<?= $registration->getId() ?>">Editar</a>
+                                        <a class="btn delete" href="delete.php?id=<?= $registration->getId() ?>">Excluir</a>
+                                    </div>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
