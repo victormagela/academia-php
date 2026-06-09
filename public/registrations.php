@@ -25,39 +25,41 @@
                 
                 <h2>Cadastros</h2>
     
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nome</th>
-                            <th>Email</th>
-                            <th>Telefone</th>
-                            <th>Data de Nascimento</th>
-                            <th>CPF</th>
-                            <th>Endereço</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach($registrations as $registration): ?>
+                <div class="table-container">
+                    <table>
+                        <thead>
                             <tr>
-                                <td><?= $registration->getId(); ?></td>
-                                <td><?= $registration->name; ?></td>
-                                <td><?= $registration->email; ?></td>
-                                <td><?= $registration->phone; ?></td>
-                                <td><?= $registration->birthDate; ?></td>
-                                <td><?= $registration->cpf; ?></td>
-                                <td><?= $registration->address; ?></td>
-                                <td>
-                                    <div class="flex-row">
-                                        <a class="btn edit" href="edit.php?id=<?= $registration->getId() ?>">Editar</a>
-                                        <a onclick="return confirm('Tem certeza que deseja excluir este cadastro?')" class="btn delete" href="delete.php?id=<?= $registration->getId() ?>">Excluir</a>
-                                    </div>
-                                </td>
+                                <th>Id</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                                <th>Data de Nascimento</th>
+                                <th>CPF</th>
+                                <th>Endereço</th>
+                                <th>Ações</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php foreach($registrations as $registration): ?>
+                                <tr>
+                                    <td><?= $registration->getId(); ?></td>
+                                    <td><?= $registration->name; ?></td>
+                                    <td><?= $registration->email; ?></td>
+                                    <td><?= $registration->phone; ?></td>
+                                    <td><?= $registration->birthDate; ?></td>
+                                    <td><?= $registration->cpf; ?></td>
+                                    <td><?= $registration->address; ?></td>
+                                    <td>
+                                        <div class="flex-row">
+                                            <a class="btn edit" href="edit.php?id=<?= $registration->getId() ?>">Editar</a>
+                                            <a onclick="return confirm('Tem certeza que deseja excluir este cadastro?')" class="btn delete" href="delete.php?id=<?= $registration->getId() ?>">Excluir</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             <?php else : ?>
                 <p>Nenhum cadastro encontrado</p>
             <?php endif; ?>
