@@ -77,4 +77,11 @@ class RegistrationRepository {
         
         return $stmt->rowCount();
     }
+
+    public function deleteRegistration(int $id): int {
+        $stmt = $this->db->prepare("DELETE FROM registrations WHERE registration_id = $id;");
+        $stmt->execute();
+
+        return $stmt->rowCount();
+    }
 }

@@ -51,7 +51,7 @@
                                 <td>
                                     <div class="flex-row">
                                         <a class="btn edit" href="edit.php?id=<?= $registration->getId() ?>">Editar</a>
-                                        <a class="btn delete" href="delete.php?id=<?= $registration->getId() ?>">Excluir</a>
+                                        <a onclick="return confirm('Tem certeza que deseja excluir este cadastro?')" class="btn delete" href="delete.php?id=<?= $registration->getId() ?>">Excluir</a>
                                     </div>
                                 </td>
                             </tr>
