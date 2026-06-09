@@ -64,6 +64,20 @@ ul .cta-link {
   color: var(--primary-color);
 }
 
+@media (width < 1140px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    font-size: 1.225rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
 @media (width < 900px) {
   .title {
     font-size: 1.6rem;
