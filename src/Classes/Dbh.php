@@ -16,7 +16,8 @@ class Dbh {
                 self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 self::$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
-                echo "Oops, algo deu errado. Tente novamente.";
+                // echo "Oops, algo deu errado. Tente novamente.";
+                throw $e;
                 die();
             }
 
